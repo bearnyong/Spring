@@ -1,0 +1,32 @@
+package com.greedy.section01.xmlconfig;
+
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.support.GenericXmlApplicationContext;
+
+public class Application {
+
+	public static void main(String[] args) {
+		
+		/* 우선 IOC 컨테이너라 불리는 존재의 최상위 인터페이스인 bean factory부터 살펴 볼 것이다.
+		 * xml파일 bean 등록 =  IOC 컨테이너 어쩌구 확인하기
+		 * 
+		 * class not found 
+		 * */
+		
+		ApplicationContext context = new GenericXmlApplicationContext("com/greedy/section01/xmlconfig/spring-context.xml");
+//		System.out.println(context.getBean("member"));
+		
+		MemberDTO member0 = new MemberDTO(1, "이름", "기본주소임", "상세주소임", 20, 'M');
+		
+		MemberDTO member = context.getBean("member", MemberDTO.class);
+		MemberDTO member2 = context.getBean("member", MemberDTO.class);
+		
+		/*두 인스턴스가 동일한 주소값을 가지고 있으며 이는 싱글톤 패턴이다.*/
+		System.out.println("member : " + member.hashCode());
+		System.out.println("member2 : " + member2.hashCode());
+		System.out.println("========================");
+		System.out.println(member == member2);
+		
+	}
+
+}

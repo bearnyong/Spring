@@ -1,0 +1,13 @@
+package com.greedy.section01.javaconfig;
+
+import org.springframework.context.annotation.Configuration;
+
+@Configration
+public class ContextConfiguration {
+	
+	@Bean(name = "memberDTO")
+	public MemberDTO getMember() {
+		return new MemberDTO(1, "자바이름", "자바 기본 주소", "자바 상세 주소");
+	}
+
+}

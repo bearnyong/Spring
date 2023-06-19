@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+       
+       <bean id="member" class="com.greedy.section01.xmlconfig.MemberDTO">
+       		<!-- 매개변수 몇 개 넘겨서 매칭할건지...에 대한... -->
+       		<constructor-arg index="0" value="1"/>
+       		<constructor-arg index="1" value="이름"/>
+       		<constructor-arg index="2" value="기본주소"/>
+       		<constructor-arg index="3" value="상세주소"/>
+       		<constructor-arg index="4" value="20"/>
+       		<constructor-arg name="gender"><value>M</value></constructor-arg>
+       </bean>
+</beans>

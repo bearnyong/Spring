@@ -1,0 +1,9 @@
+package com.greedy.section01.javaconfig.config;
+
+import org.springframework.context.annotation.Configuration;
+
+/*메타 정보를 가지고 있는 것을 스프링에게 알려줌...*/
+@Configuration
+public class ContextConfiguration {
+	
+}

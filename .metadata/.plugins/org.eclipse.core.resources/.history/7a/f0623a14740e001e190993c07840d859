@@ -1,0 +1,23 @@
+package com.greedy.section01.javaconfig;
+
+import java.util.Map;
+
+public class MemberDAOImpl implements MemberDAO {
+	
+	private final Map<Integer, MemberDTO> memberMap;
+	
+	public MemberDAOImpl() {
+		
+	}
+	
+	@Override
+	public MemberDTO selectMember(int sequence) {
+		return new MemberDTO();
+	}
+	
+	@Override
+	public boolean insertMember(MemberDTO member) {
+		return false;
+	}
+
+}

@@ -1,0 +1,15 @@
+package com.greedy.section01.xmlconfig;
+
+public class MemberDTO {
+	
+	private int id;
+	private String name;
+	private String addr;
+	private String addr2;
+	private int age;
+	private char gender;
+	
+	
+	
+
+}

@@ -1,0 +1,26 @@
+package com.greedy.section01.javaconfig;
+
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.annotation.AnnotationConfigApplicationContext;
+
+import com.greedy.section01.javaconfig.config.ContextConfiguration;
+
+public class Application {
+
+	public static void main(String agrs[]) {
+		
+		ApplicationContext context = new AnnotationConfigApplicationContext(ContextConfiguration.class);
+		
+		// MemberDTO member = new MemberDTO();
+		// member.setMemberCode(1);
+		
+		String[] beanNames = context.getBeanDefinitionNames();
+		int index = 0;
+		for(String string : beanNames) {
+			System.out.println(string + (++index));
+		}
+		
+		
+	}
+	
+}

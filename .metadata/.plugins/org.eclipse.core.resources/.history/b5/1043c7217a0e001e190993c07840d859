@@ -1,0 +1,8 @@
+package com.greedy.section01.javaconfig.config;
+
+/* excludeFilter로 스캐닝에서 제외할 타입을 기술하면 해당 타입은 스캐닝에서 제외한다. */
+@Configuration
+@ComponentScan(basePackages = "com.greedy.section01.javaconfig")
+public class ContextConfiguration2 {
+
+}

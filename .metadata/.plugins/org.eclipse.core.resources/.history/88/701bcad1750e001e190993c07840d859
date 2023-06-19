@@ -1,0 +1,12 @@
+package com.greedy.section01.javaconfig.config;
+
+import org.springframework.context.annotation.ComponentScan;
+
+/*메타 정보를 가지고 있는 것을 스프링에게 알려줌...
+ * @Configuration*/
+
+/*루트를 읽고 컴포넌트 가져와?!!? @Component 읽어와라...라는 의미*/
+@ComponentScan(basePackages = "com.greedy.section01.javaconfig")
+public class ContextConfiguration {
+	
+}

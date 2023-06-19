@@ -1,0 +1,23 @@
+package com.greedy.section01.xmlconfig;
+
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.support.GenericXmlApplicationContext;
+
+public class Application {
+
+	public static void main(String[] args) {
+		
+		ApplicationContext context = new GenericXmlApplicationContext("com/greedy/section01/xmlconfig/spring-context.xml");
+//		System.out.println(context.getBean("member"));
+		
+		MemberDTO member = context.getBean("member", MemberDTO.class);
+		MemberDTO member2 = context.getBean("member", MemberDTO.class);
+		System.out.println("member : " + member.hashCode());
+		System.out.println("member2 : " + member2.hashCode());
+		
+		System.out.println("========================");
+		System.out.println(member == member2);
+		
+	}
+
+}
