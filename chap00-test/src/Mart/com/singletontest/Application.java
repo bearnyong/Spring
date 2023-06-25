@@ -16,8 +16,6 @@ public class Application {
 
 		ApplicationContext context = new AnnotationConfigApplicationContext(/*자바설정*/ContextConfiguration.class);
 				
-		String[] beanNames = context.getBeanDefinitionNames();
-		
 		Product beef = context.getBean("beef", Meat.class);
 		Product pork = context.getBean("pork", Meat.class);
 		Product lettuce = context.getBean("lettuce", Vegetable.class);
@@ -36,7 +34,7 @@ public class Application {
 		System.out.println("★★★★★ min_young shoopingcart★★★★★");
 		minyoung.getItems();
 		
-		System.out.println("__ price : ");
+		System.out.print("__ price : ");
 		minyoung.priceItems();
 		
 		
@@ -52,12 +50,8 @@ public class Application {
 		System.out.println("★★★★★ ji_hwan shoopingcart★★★★★");
 		jihwan.getItems();
 		
-		System.out.println("__ price : ");
+		System.out.print("__ price : ");
 		jihwan.priceItems();
-		
-		
-		/*형통 쇼핑카트*/
-		
 		
 	}
 
